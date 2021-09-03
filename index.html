@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarTrawler</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/61f4f5320c.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    
+
+    <div class = "container ">
+        <div class = "car-wrapper" id="car-wrapper">
+          <div class = "car-search">
+            <h2 class = "title">Car Hire – CarTrawler</h2>
+
+
+            <div id="pickup" class = "pickup ">
+                
+            </div>
+
+
+          </div>
+
+          <div class="dropdown alignleft">
+            <span class="titlemask-infobar">  Filter </span><button onclick="showDropDown('vendorDropDown')" class="dropbtn">Vendors  <span class="fas fa-sort-down"></span></button>
+            <div id="vendorDropDown" class="dropdown-content">
+            </div>
+          </div>
+
+          <div class="dropdown alignright">
+            <span class="titlemask-infobar">  Sort by </span><button onclick="showDropDown('sortDropDown')" class="dropbtn">Price  <span class="fas fa-sort-down"></span></button>
+            <div id="sortDropDown" class="dropdown-content alignright">
+                <a id="ALL" onclick="orderPrice(true)">Low to High</a>
+                <a id="ALL" onclick="orderPrice(false)">High to Low</a>
+            </div>
+          </div>
+          
+          <br>
+          <div class = "car-result">
+            <div id= "car">
+                
+            </div>
+          </div>
+
+
+        </div>
+
+            
+    
+        <div class = "car-details">
+            <!-- details close btn -->
+            <button type = "button" class = "btn details-close-btn" id = "details-close-btn">
+              <i class = "fas fa-times"></i>
+            </button>
+    
+            <!-- car content -->
+            <div class = "car-details-content">
+
+            </div>
+          </div>
+      </div>
+
+
+    <script src="./app.js"></script>
+  </body>
+</html>
